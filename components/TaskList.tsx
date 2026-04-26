@@ -1,8 +1,11 @@
 'use client'
 import { useState } from 'react'
-import { CheckCircle2, Circle, CornerDownLeft } from 'lucide-react'
+import { CheckCircle2, Circle, CornerDownLeft, ExternalLink } from 'lucide-react'
 
-type Task = { id: string; level: string; title: string; due: string; carryover: boolean; done: boolean }
+type Link = { label: string; url: string; type: string }
+type Task = { id: string; level: string; title: string; due: string; carryover: boolean; done: boolean; links?: Link[] }
+
+const LINK_ICON: Record<string,string> = { jira:'🎯', doc:'📄', sheet:'📊', tracker:'🔗' }
 
 const LC: Record<string, string> = { P0:'#ef4444', P1:'#f97316', P2:'#eab308', P3:'#6366f1' }
 const FILTERS = ['All','P0','P1','P2','P3']
@@ -67,6 +70,20 @@ export default function TaskList({ tasks: init }: { tasks: Task[] }) {
               {/* Due */}
               <span className="text-xs text-slate-600 flex-shrink-0 w-12 text-right">{task.due}</span>
             </button>
+            {/* Links row — only when not done */}
+            {!task.done && task.links && task.links.length > 0 && (
+              <div className="flex flex-wrap gap-1 px-3 pb-2" onClick={e => e.stopPropagation()}>
+                {task.links.map((l, li) => (
+                  <a key={li} href={l.url} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-1 px-1.5 py-0.5 rounded text-xs transition-all"
+                    style={{ background:'rgba(99,102,241,0.07)', border:'1px solid rgba(99,102,241,0.15)', color:'#6366f1' }}>
+                    <span style={{ fontSize:'10px' }}>{LINK_ICON[l.type]||'🔗'}</span>
+                    <span className="opacity-80">{l.label}</span>
+                    <ExternalLink size={8} className="opacity-50"/>
+                  </a>
+                ))}
+              </div>
+            )}
           )
         })}
         {filtered.length === 0 && (

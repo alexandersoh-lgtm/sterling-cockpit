@@ -1,14 +1,36 @@
 'use client'
 import { useState } from 'react'
-import { CheckCircle2, Circle, ChevronDown, ChevronUp, Flame, Zap, ArrowUp, Minus } from 'lucide-react'
+import { CheckCircle2, Circle, ChevronDown, ChevronUp, Flame, Zap, ArrowUp, Minus, ExternalLink } from 'lucide-react'
 
-type Priority = { id: string; level: string; title: string; why: string; actions: string[]; due: string }
+type Link = { label: string; url: string; type: string }
+type Priority = { id: string; level: string; title: string; why: string; actions: string[]; due: string; links?: Link[] }
 
 const CFG: Record<string, { color: string; bg: string; border: string; glow: string; icon: React.ReactNode; label: string }> = {
   P0: { color:'#ef4444', bg:'rgba(239,68,68,0.07)', border:'rgba(239,68,68,0.22)', glow:'glow-red',    icon:<Flame size={11} className="text-red-400"/>,   label:'FIRE'      },
   P1: { color:'#f97316', bg:'rgba(249,115,22,0.07)',border:'rgba(249,115,22,0.20)', glow:'glow-orange', icon:<Zap size={11} className="text-orange-400"/>,  label:'CRITICAL'  },
   P2: { color:'#eab308', bg:'rgba(234,179,8,0.06)', border:'rgba(234,179,8,0.18)', glow:'glow-yellow', icon:<ArrowUp size={11} className="text-yellow-400"/>,label:'IMPORTANT' },
   P3: { color:'#6366f1', bg:'rgba(99,102,241,0.06)',border:'rgba(99,102,241,0.18)', glow:'glow-indigo', icon:<Minus size={11} className="text-indigo-400"/>, label:'QUEUE'     },
+}
+
+const TYPE_ICON: Record<string, string> = {
+  jira: '🎯', doc: '📄', sheet: '📊', slides: '📑', tracker: '🔗'
+}
+
+function LinkChips({ links }: { links: Link[] }) {
+  return (
+    <div className="flex flex-wrap gap-1.5 pt-1">
+      {links.map((l, i) => (
+        <a key={i} href={l.url} target="_blank" rel="noopener noreferrer"
+          className="flex items-center gap-1 px-2 py-1 rounded-md text-xs transition-all"
+          style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.18)', color: '#818cf8' }}
+          onClick={e => e.stopPropagation()}>
+          <span className="text-xs">{TYPE_ICON[l.type] || '🔗'}</span>
+          {l.label}
+          <ExternalLink size={9} className="opacity-60"/>
+        </a>
+      ))}
+    </div>
+  )
 }
 
 function CompactCard({ p, selected, onClick }: { p: Priority; selected: boolean; onClick: () => void }) {
@@ -43,7 +65,7 @@ function DetailPanel({ p }: { p: Priority }) {
       style={{ background: c.bg, border: `1px solid ${c.border}`, borderLeft: `3px solid ${c.color}` }}>
       <p className="text-xs text-slate-400 leading-relaxed mb-3">{p.why}</p>
       <p className="section-label mb-2">Actions</p>
-      <div className="space-y-2">
+      <div className="space-y-2 mb-3">
         {p.actions.map((a, i) => (
           <button key={i} onClick={() => toggle(i)} className="flex items-start gap-2 w-full text-left group">
             {done.has(i)
@@ -53,6 +75,7 @@ function DetailPanel({ p }: { p: Priority }) {
           </button>
         ))}
       </div>
+      {p.links && p.links.length > 0 && <LinkChips links={p.links} />}
     </div>
   )
 }

@@ -1,11 +1,27 @@
 'use client'
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight, MapPin, Target, Gavel, MessageSquare, BookOpen, History, Users } from 'lucide-react'
+import { ChevronLeft, ChevronRight, MapPin, Target, Gavel, MessageSquare, BookOpen, History, Users, ExternalLink } from 'lucide-react'
 
+type Link = { label: string; url: string; type: string }
 type Meeting = {
   id: string; title: string; day: string; time: string; location: string;
   attendees: string[]; goal: string; role: string; decision: string;
-  history: string; talkingPoints: string[]; preReads: string[]; type: string;
+  history: string; talkingPoints: string[]; preReads: string[]; type: string; links?: Link[]
+}
+
+const LINK_ICON: Record<string,string> = { jira:'🎯', doc:'📄', sheet:'📊', slides:'📑', tracker:'🔗' }
+function LinkChips({ links }: { links: Link[] }) {
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {links.map((l,i) => (
+        <a key={i} href={l.url} target="_blank" rel="noopener noreferrer"
+          className="flex items-center gap-1 px-2 py-1 rounded-md text-xs transition-all"
+          style={{ background:'rgba(99,102,241,0.08)', border:'1px solid rgba(99,102,241,0.18)', color:'#818cf8' }}>
+          <span>{LINK_ICON[l.type]||'🔗'}</span>{l.label}<ExternalLink size={9} className="opacity-60"/>
+        </a>
+      ))}
+    </div>
+  )
 }
 
 const TYPE_COLORS: Record<string, string> = {
@@ -118,6 +134,14 @@ export default function MeetingSection({ meetings }: { meetings: Meeting[] }) {
             )}
           </div>
         </div>
+
+        {/* Links */}
+        {m.links && m.links.length > 0 && (
+          <div className="px-4 pb-3 border-t pt-3" style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
+            <p className="section-label mb-2">Reference Materials</p>
+            <LinkChips links={m.links} />
+          </div>
+        )}
 
         {/* Counter */}
         <div className="px-4 pb-3 flex justify-end">

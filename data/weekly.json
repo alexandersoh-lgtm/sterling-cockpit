@@ -7,10 +7,10 @@
   },
   "stakes": "You're heading to Seattle for the CoreTech zRetreat with a Genesys Dialer UAT that must close by Tuesday, two overdue P0 actions, and an exec status report due Friday — all while operating out of a hotel. Win this week and the May 4 pilot launches on time.",
   "stakesCards": [
-    { "id": "s1", "level": "P0", "icon": "fire",     "headline": "UAT closes Tuesday",       "sub": "Pilot launches May 4 — 2 decisions overdue" },
-    { "id": "s2", "level": "P0", "icon": "fire",     "headline": "2 P0s overdue pre-flight", "sub": "Resolve before boarding Monday morning" },
-    { "id": "s3", "level": "P1", "icon": "plane",    "headline": "Seattle all week",          "sub": "CoreTech zRetreat · limited desk time" },
-    { "id": "s4", "level": "P2", "icon": "doc",      "headline": "Exec report due Friday",    "sub": "Draft on the plane — don't wait til Thursday" }
+    { "id": "s1", "level": "P0", "icon": "fire",  "headline": "UAT closes Tuesday",       "sub": "Pilot launches May 4 — 2 decisions overdue" },
+    { "id": "s2", "level": "P0", "icon": "fire",  "headline": "2 P0s overdue pre-flight", "sub": "Resolve before boarding Monday morning" },
+    { "id": "s3", "level": "P1", "icon": "plane", "headline": "Seattle all week",          "sub": "CoreTech zRetreat · limited desk time" },
+    { "id": "s4", "level": "P2", "icon": "doc",   "headline": "Exec report due Friday",   "sub": "Draft on the plane — don't wait til Thursday" }
   ],
   "priorities": [
     {
@@ -23,7 +23,12 @@
         "Send Vishwas the validated pilot user list (70–80 users, GNR/acquisitions volunteers)",
         "Stay available on Slack for Chris/Coventry to unblock UAT issues"
       ],
-      "due": "Apr 28"
+      "due": "Apr 28",
+      "links": [
+        { "label": "B2BFAST-11848 · UAT Ticket", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11848", "type": "jira" },
+        { "label": "B2BFAST-11694 · Unified Dialer Deployment", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11694", "type": "jira" },
+        { "label": "B2BFAST-12630 · Gong Todos UAT Prep", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-12630", "type": "jira" }
+      ]
     },
     {
       "id": "p2",
@@ -35,7 +40,12 @@
         "Have the conversation face-to-face — don't let this become a Slack thread",
         "Confirm owner by COB Tuesday"
       ],
-      "due": "Apr 28"
+      "due": "Apr 28",
+      "links": [
+        { "label": "Rollout Plan [WIP]", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" },
+        { "label": "Gong PMO Tracker", "url": "https://docs.google.com/document/d/1w_dPLhXXx72qe_AZTFgimnndmHi5QH2uIPWwK5Cfny8/edit", "type": "doc" },
+        { "label": "Product Brief — Unified Sales Tech", "url": "https://docs.google.com/document/d/1purLl__3BLDDCy8GYqe_l1bJVPY-W3ch5L4AUycDMfI/edit", "type": "doc" }
+      ]
     },
     {
       "id": "p3",
@@ -46,7 +56,11 @@
         "Confirm with Vishwas first thing Monday: non-prod API access confirmed?",
         "If not resolved, escalate immediately — 2 days overdue"
       ],
-      "due": "Apr 27"
+      "due": "Apr 27",
+      "links": [
+        { "label": "B2BFAST-11428 · Configure Genesys CTI in Salesforce", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11428", "type": "jira" },
+        { "label": "B2BFAST-11038 · Gong Data Integrations & Unified Dialer", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11038", "type": "jira" }
+      ]
     },
     {
       "id": "p4",
@@ -57,7 +71,12 @@
         "Block 90 minutes on the plane or Tuesday evening at the hotel",
         "Pull workstream progress, open risks, and decisions from Gong Tracker for source material"
       ],
-      "due": "Apr 30"
+      "due": "Apr 30",
+      "links": [
+        { "label": "AS Weekly Deliverable Tracker", "url": "https://docs.google.com/document/d/11OmgCZvpwxsY0dZpJvaSU7YjrecDOIJrGZKDDp0pfRs/edit", "type": "doc" },
+        { "label": "Apr 20 Weekly Tracker", "url": "https://docs.google.com/document/d/1mH-iIQQPL_A2HoxOyVDJ8qRyLDa9KLwBVFJIaiggYeQ/edit", "type": "doc" },
+        { "label": "Gong Tracker Live", "url": "https://gong-tracker-alexandersoh-lgtms-projects.vercel.app", "type": "tracker" }
+      ]
     },
     {
       "id": "p5",
@@ -68,7 +87,11 @@
         "Slack Wardah (New Con), Yen (StreetEasy), Taylor/Ryan (ZMGI) — 10 min async, no meeting",
         "Confirm at New Con sync Thursday that Wardah is aligned"
       ],
-      "due": "May 1"
+      "due": "May 1",
+      "links": [
+        { "label": "Rollout Plan — Phase 2 Section", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" },
+        { "label": "Gong Engage & Forecast: Scope + Timeline", "url": "https://docs.google.com/document/d/1kaXhqpyzpwHiQurCy9GBqi5POyNRkmbO3FcZDln6kx4/edit", "type": "doc" }
+      ]
     }
   ],
   "decisions": [
@@ -174,8 +197,13 @@
         "\"We still need a Forecast workstream owner. I'm escalating this week — who should I be talking to?\"",
         "Know your tracker numbers cold. You'll be asked. Be the person who already has the answer."
       ],
-      "preReads": ["Gong Tracker live status (gong-tracker-alexandersoh-lgtms-projects.vercel.app)", "Workstream % complete and open blockers across all 4 workstreams"],
-      "type": "retreat"
+      "preReads": ["Gong Tracker live status", "Workstream % complete and open blockers across all 4 workstreams"],
+      "type": "retreat",
+      "links": [
+        { "label": "Gong Tracker Live", "url": "https://gong-tracker-alexandersoh-lgtms-projects.vercel.app", "type": "tracker" },
+        { "label": "Rollout Plan [WIP]", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" },
+        { "label": "Frontline Products ASA Leaders Sync", "url": "https://docs.google.com/document/d/1XuiFU3OIrb9zm1nh4Z4XlS7S5Hfn0v4SbAbQ7X8e5nA/edit", "type": "doc" }
+      ]
     },
     {
       "id": "m2",
@@ -193,8 +221,13 @@
         "\"What's the minimum LOE for a proof of concept?\"",
         "\"What are the dependencies on our side vs. yours — who needs to be in the room?\""
       ],
-      "preReads": ["Sonar outage RCA (received Apr 23 from Megan Griffitt) — skim it, know the gist"],
-      "type": "session"
+      "preReads": ["Sonar outage RCA (received Apr 23 from Megan Griffitt)", "Executive Pre-Read: Genesys & Gong Call Recording Retention"],
+      "type": "session",
+      "links": [
+        { "label": "Executive Pre-Read: Genesys & Gong Retention", "url": "https://docs.google.com/document/d/1V52SMTKQSmvFVlVxwNAJtMhm926kvW9A/edit", "type": "doc" },
+        { "label": "Auto Delete Project Doc", "url": "https://docs.google.com/document/d/1LL963D8Qz3p1sv_RBwyGUT16WjoHZSmW/edit", "type": "doc" },
+        { "label": "Genesys Gong Retention Deletion PRD", "url": "https://docs.google.com/document/d/1AqSUnhydYodI9jOpAIRUu5sCDy36QJ7y656Dz9dfl2o/edit", "type": "doc" }
+      ]
     },
     {
       "id": "m3",
@@ -212,8 +245,13 @@
         "\"What builder-facing workflow inputs do we need before we can kick off Discovery?\"",
         "\"StreetEasy and ZMGI are in the same boat — I'm confirming owners across all three this week.\""
       ],
-      "preReads": ["launches.json — New Con row (all phases not_started)"],
-      "type": "recurring"
+      "preReads": ["New Con Weekly Agenda/Notes doc", "Rollout Plan — Phase 2 section"],
+      "type": "recurring",
+      "links": [
+        { "label": "New Con Weekly Agenda / Notes", "url": "https://docs.google.com/document/d/1O8SKXWv51yHm6TEOgKNJZ2S0vytGeiZxx7uLhhEzGbo/edit", "type": "doc" },
+        { "label": "Frontline Products Weekly Sync Agenda", "url": "https://docs.google.com/document/d/1Iwu_er0EsmD6LU4qkgWImc9EQCGT7-Wotky_k01c3JQ/edit", "type": "doc" },
+        { "label": "Rollout Plan — Phase 2", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" }
+      ]
     },
     {
       "id": "m4",
@@ -232,22 +270,84 @@
         "\"Grant's response lag last week — is that cleared up? What's our escalation path going forward?\""
       ],
       "preReads": ["None — you know this cold"],
-      "type": "recurring"
+      "type": "recurring",
+      "links": [
+        { "label": "Rollout Plan [WIP]", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" },
+        { "label": "Implementation SOW", "url": "https://docs.google.com/document/d/1cgd7PIck03iWKxDphRGPXWEl5qvhEOjMLd--e9P_mE0/edit", "type": "doc" },
+        { "label": "Gong Engage & Forecast UAT Doc", "url": "https://docs.google.com/document/d/1zz3Hf7EM__lwIj3ki7Xkt9lc8UQLsTfWHmz1dsDIAUs/edit", "type": "doc" }
+      ]
     }
   ],
   "tasks": [
-    { "id": "t1", "level": "P0", "title": "Decide Gong dialing disable vs. keep for pilot cohort", "due": "Apr 27", "carryover": true, "done": false },
-    { "id": "t2", "level": "P0", "title": "Send Vishwas validated pilot user list (70–80 users)", "due": "Apr 27", "carryover": true, "done": false },
-    { "id": "t3", "level": "P0", "title": "Confirm Gong Forecast workstream owner — escalate to VP Sales Ops", "due": "Apr 28", "carryover": true, "done": false },
-    { "id": "t4", "level": "P0", "title": "Verify Genesys API credentials unblocked — check INC1965714", "due": "Apr 27", "carryover": true, "done": false },
-    { "id": "t5", "level": "P1", "title": "Monitor Genesys UAT — unblock Chris/Coventry as needed", "due": "Apr 28", "carryover": false, "done": false },
-    { "id": "t6", "level": "P1", "title": "Cut Genesis dev user setup tickets for UAT testers (Vishwas needs this)", "due": "Apr 27", "carryover": false, "done": false },
-    { "id": "t7", "level": "P2", "title": "Draft Q2 executive status report", "due": "Apr 30", "carryover": false, "done": false },
-    { "id": "t8", "level": "P2", "title": "Confirm launch owners — Wardah, Yen, Taylor/Ryan (Slack async)", "due": "May 1", "carryover": false, "done": false },
-    { "id": "t9", "level": "P2", "title": "Schedule Switchboard / Jen Swanton sync (promised to Mark Kickbusch)", "due": "This week", "carryover": false, "done": false },
-    { "id": "t10", "level": "P2", "title": "Develop Genesys pilot evaluation criteria + rep satisfaction survey", "due": "Apr 30", "carryover": false, "done": false },
-    { "id": "t11", "level": "P3", "title": "Evaluate Chili Piper readiness for agent success group before Calendly renewal", "due": "May 18", "carryover": false, "done": false },
-    { "id": "t12", "level": "P3", "title": "Engage legal for ZMGI compliance review kickoff", "due": "May 15", "carryover": false, "done": false }
+    { "id": "t1", "level": "P0", "title": "Decide Gong dialing disable vs. keep for pilot cohort", "due": "Apr 27", "carryover": true, "done": false,
+      "links": [
+        { "label": "B2BFAST-11694", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11694", "type": "jira" },
+        { "label": "B2BFAST-11848 · UAT", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11848", "type": "jira" }
+      ]
+    },
+    { "id": "t2", "level": "P0", "title": "Send Vishwas validated pilot user list (70–80 users)", "due": "Apr 27", "carryover": true, "done": false,
+      "links": [
+        { "label": "B2BFAST-11848 · UAT", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11848", "type": "jira" },
+        { "label": "B2BFAST-12630 · Gong Todos UAT Prep", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-12630", "type": "jira" }
+      ]
+    },
+    { "id": "t3", "level": "P0", "title": "Confirm Gong Forecast workstream owner — escalate to VP Sales Ops", "due": "Apr 28", "carryover": true, "done": false,
+      "links": [
+        { "label": "Rollout Plan [WIP]", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" },
+        { "label": "Gong PMO Tracker", "url": "https://docs.google.com/document/d/1w_dPLhXXx72qe_AZTFgimnndmHi5QH2uIPWwK5Cfny8/edit", "type": "doc" }
+      ]
+    },
+    { "id": "t4", "level": "P0", "title": "Verify Genesys API credentials unblocked — check INC1965714", "due": "Apr 27", "carryover": true, "done": false,
+      "links": [
+        { "label": "B2BFAST-11428 · Genesys CTI Config", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11428", "type": "jira" },
+        { "label": "B2BFAST-11038 · Gong Data & Dialer", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11038", "type": "jira" }
+      ]
+    },
+    { "id": "t5", "level": "P1", "title": "Monitor Genesys UAT — unblock Chris/Coventry as needed", "due": "Apr 28", "carryover": false, "done": false,
+      "links": [
+        { "label": "B2BFAST-11848 · UAT Ticket", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11848", "type": "jira" },
+        { "label": "B2BFAST-11847 · QA End to End", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11847", "type": "jira" }
+      ]
+    },
+    { "id": "t6", "level": "P1", "title": "Cut Genesis dev user setup tickets for UAT testers (Vishwas needs this)", "due": "Apr 27", "carryover": false, "done": false,
+      "links": [
+        { "label": "B2BFAST-11849 · Populate Gong User IDs", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11849", "type": "jira" },
+        { "label": "B2BFAST-11848 · UAT", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11848", "type": "jira" }
+      ]
+    },
+    { "id": "t7", "level": "P2", "title": "Draft Q2 executive status report", "due": "Apr 30", "carryover": false, "done": false,
+      "links": [
+        { "label": "AS Weekly Deliverable Tracker", "url": "https://docs.google.com/document/d/11OmgCZvpwxsY0dZpJvaSU7YjrecDOIJrGZKDDp0pfRs/edit", "type": "doc" },
+        { "label": "Gong Tracker Live", "url": "https://gong-tracker-alexandersoh-lgtms-projects.vercel.app", "type": "tracker" }
+      ]
+    },
+    { "id": "t8", "level": "P2", "title": "Confirm launch owners — Wardah, Yen, Taylor/Ryan (Slack async)", "due": "May 1", "carryover": false, "done": false,
+      "links": [
+        { "label": "Rollout Plan — Phase 2", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" }
+      ]
+    },
+    { "id": "t9", "level": "P2", "title": "Schedule Switchboard / Jen Swanton sync (promised to Mark Kickbusch)", "due": "This week", "carryover": false, "done": false,
+      "links": [
+        { "label": "Executive Pre-Read: Genesys & Gong Retention", "url": "https://docs.google.com/document/d/1V52SMTKQSmvFVlVxwNAJtMhm926kvW9A/edit", "type": "doc" },
+        { "label": "Auto Delete Project Doc", "url": "https://docs.google.com/document/d/1LL963D8Qz3p1sv_RBwyGUT16WjoHZSmW/edit", "type": "doc" }
+      ]
+    },
+    { "id": "t10", "level": "P2", "title": "Develop Genesys pilot evaluation criteria + rep satisfaction survey", "due": "Apr 30", "carryover": false, "done": false,
+      "links": [
+        { "label": "B2BFAST-12630 · Gong Todos UAT Prep", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-12630", "type": "jira" },
+        { "label": "Gong Engage & Forecast UAT Doc", "url": "https://docs.google.com/document/d/1zz3Hf7EM__lwIj3ki7Xkt9lc8UQLsTfWHmz1dsDIAUs/edit", "type": "doc" }
+      ]
+    },
+    { "id": "t11", "level": "P3", "title": "Evaluate Chili Piper readiness for agent success group before Calendly renewal", "due": "May 18", "carryover": false, "done": false,
+      "links": [
+        { "label": "Frontline Products & Engineering 2026 AOP", "url": "https://docs.google.com/spreadsheets/d/1suE5zHXJ86eYiCIYE5Y4VWnsWwqdjmgHCXaTfwHn9hg/edit", "type": "sheet" }
+      ]
+    },
+    { "id": "t12", "level": "P3", "title": "Engage legal for ZMGI compliance review kickoff", "due": "May 15", "carryover": false, "done": false,
+      "links": [
+        { "label": "Rollout Plan — ZMGI Section", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" }
+      ]
+    }
   ],
   "deepWork": {
     "window": "Monday morning before your flight — or on the plane",
