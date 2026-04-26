@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "weekStart": "2026-04-27",
+    "weekEnd": "2026-05-01",
+    "generatedAt": "2026-04-26T18:05:00",
+    "briefNumber": 1
+  },
+  "stakes": "You're heading to Seattle for the CoreTech zRetreat with a Genesys Dialer UAT that must close by Tuesday, two overdue P0 actions, and an exec status report due Friday — all while operating out of a hotel. Win this week and the May 4 pilot launches on time.",
+  "priorities": [
+    {
+      "id": "p1",
+      "level": "P0",
+      "title": "Close Genesys Dialer UAT",
+      "why": "UAT opened Friday (FC2 live). Pilot launches May 4. Production deployment blocked until after retreat. Two decisions are on you — both overdue since Apr 25.",
+      "actions": [
+        "Decide on Gong dialing disable vs. keep before your flight Monday",
+        "Send Vishwas the validated pilot user list (70–80 users, GNR/acquisitions volunteers)",
+        "Stay available on Slack for Chris/Coventry to unblock UAT issues"
+      ],
+      "due": "Apr 28"
+    },
+    {
+      "id": "p2",
+      "level": "P0",
+      "title": "Name the Gong Forecast Workstream Owner",
+      "why": "Highest-likelihood, highest-impact open risk. No owner = no configuration, no training plan, no timeline. The retreat puts leadership in the same building — use it.",
+      "actions": [
+        "Identify who you need to corner at the retreat (VP Sales Ops or delegate)",
+        "Have the conversation face-to-face — don't let this become a Slack thread",
+        "Confirm owner by COB Tuesday"
+      ],
+      "due": "Apr 28"
+    },
+    {
+      "id": "p3",
+      "level": "P1",
+      "title": "Verify Genesys API Credentials Unblocked",
+      "why": "INC1964584 (Genesys Setup) marked resolved Apr 24 — but INC1965714 (Genesys ZillowDev) had new comments same day. Unclear if this is a new issue. If API access is still not provisioned, the integration is blocked.",
+      "actions": [
+        "Confirm with Vishwas first thing Monday: non-prod API access confirmed?",
+        "If not resolved, escalate immediately — 2 days overdue"
+      ],
+      "due": "Apr 27"
+    },
+    {
+      "id": "p4",
+      "level": "P2",
+      "title": "Draft Q2 Executive Status Report",
+      "why": "Due Apr 30. You're in Seattle all week with no desk time. Draft on the plane Monday or Tuesday hotel evening — not Friday morning.",
+      "actions": [
+        "Block 90 minutes on the plane or Tuesday evening at the hotel",
+        "Pull workstream progress, open risks, and decisions from Gong Tracker for source material"
+      ],
+      "due": "Apr 30"
+    },
+    {
+      "id": "p5",
+      "level": "P2",
+      "title": "Confirm Phase 2 Launch Owners",
+      "why": "StreetEasy, New Con, ZMGI all need confirmed owners by May 1. July timelines depend on these being real commitments — not placeholder names in a JSON file.",
+      "actions": [
+        "Slack Wardah (New Con), Yen (StreetEasy), Taylor/Ryan (ZMGI) — 10 min async, no meeting",
+        "Confirm at New Con sync Thursday that Wardah is aligned"
+      ],
+      "due": "May 1"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "d1",
+      "title": "Gong dialing disable vs. keep for pilot cohort",
+      "context": "Tabled at UAT kickoff Apr 22 — separate meeting with Chris + Coventry needed",
+      "where": "Make this call before boarding Monday. Do not carry it into the retreat.",
+      "urgency": "overdue"
+    },
+    {
+      "id": "d2",
+      "title": "Gong Forecast workstream owner",
+      "context": "Highest open risk. No owner = configuration and training blocked",
+      "where": "In-person at the retreat — own this conversation proactively",
+      "urgency": "this-week"
+    },
+    {
+      "id": "d3",
+      "title": "Genesys UAT go/no-go sign-off",
+      "context": "Alex Coventry + Chris Hayden running UAT scenarios through Tuesday",
+      "where": "Signal expected by Tue — stay on Slack to unblock anything they surface",
+      "urgency": "this-week"
+    },
+    {
+      "id": "d4",
+      "title": "Calendly renewal / Chili Piper readiness for agent success group",
+      "context": "Renewal 6/30. Andy flagged agent success group hasn't been validated on CP yet",
+      "where": "Needs evaluation before 5/18 soft deadline — delegate or own it this week",
+      "urgency": "upcoming"
+    }
+  ],
+  "stakeholders": [
+    {
+      "id": "s1",
+      "name": "Alex Coventry",
+      "role": "ASA Sales Ops / Gong Forecast Lead",
+      "initials": "AC",
+      "status": "hot",
+      "lastTouch": "Apr 22 — UAT kickoff",
+      "note": "Running UAT this week. Needs your Gong dialing disable decision to proceed."
+    },
+    {
+      "id": "s2",
+      "name": "Chris Hayden",
+      "role": "ASA Enablement / Genesys UAT",
+      "initials": "CH",
+      "status": "hot",
+      "lastTouch": "Apr 22 — UAT kickoff",
+      "note": "UAT co-lead. Compiling rep feedback. No action needed — check in Wed for signal."
+    },
+    {
+      "id": "s3",
+      "name": "Vishwas Dhudum",
+      "role": "FET Engineer, Genesys Build",
+      "initials": "VD",
+      "status": "action",
+      "lastTouch": "Apr 22 — UAT kickoff",
+      "note": "Waiting on: pilot user list (70–80 users) and Genesis dev user setup tickets from you."
+    },
+    {
+      "id": "s4",
+      "name": "Brian Short",
+      "role": "Sourcing / Gong Contracts",
+      "initials": "BS",
+      "status": "warm",
+      "lastTouch": "Apr 24 — Calendly renewal call",
+      "note": "Calendly renewal 6/30. Andy's Chili Piper readiness question will resurface — be ahead of it."
+    },
+    {
+      "id": "s5",
+      "name": "Emily Bates",
+      "role": "Change Management, Gong Rollout",
+      "initials": "EB",
+      "status": "warm",
+      "lastTouch": "Apr 24 — Google Doc comment (self-resolved)",
+      "note": "Handled train-the-trainer date question on her own. No action needed this week."
+    },
+    {
+      "id": "s6",
+      "name": "Shawn Cournoyer",
+      "role": "ASA Acquisitions / Forecast Measurement",
+      "initials": "SC",
+      "status": "cold",
+      "lastTouch": "Unknown — no recent touchpoint",
+      "note": "Cold. Forecast measurement is his area. Forecast workstream owner TBD. If he's at the retreat — find him."
+    }
+  ],
+  "meetings": [
+    {
+      "id": "m1",
+      "title": "CoreTech zRetreat — Seattle",
+      "day": "Mon Apr 27 – Fri May 1",
+      "time": "All week, in-person",
+      "location": "Seattle, WA",
+      "attendees": ["Coretech Org", "Cross-functional stakeholders", "Leadership"],
+      "goal": "Relationship building, strategic alignment, and cross-team collaboration across Coretech's portfolio.",
+      "role": "Participant — but you're the PM with the highest-stakes active build in the Coretech space",
+      "decision": "Forecast workstream owner (informal), Calendly/Chili Piper readiness, Switchboard scoping",
+      "history": "You scheduled the Switchboard Deep Dive specifically for this retreat. Use hallways as much as sessions — this is where informal decisions get made.",
+      "talkingPoints": [
+        "\"The Genesys Dialer UAT closes this week — pilot launches May 4. If you want a demo, find me.\"",
+        "\"We still need a Forecast workstream owner. I'm escalating this week — who should I be talking to?\"",
+        "Know your tracker numbers cold. You'll be asked. Be the person who already has the answer."
+      ],
+      "preReads": ["Gong Tracker live status (gong-tracker-alexandersoh-lgtms-projects.vercel.app)", "Workstream % complete and open blockers across all 4 workstreams"],
+      "type": "retreat"
+    },
+    {
+      "id": "m2",
+      "title": "Switchboard Deep Dive",
+      "day": "Wed Apr 29",
+      "time": "1:05 PM – 1:50 PM PT",
+      "location": "In-Person, Seattle (zRetreat session)",
+      "attendees": ["Isabel Ferrara", "Vince Cotroneo", "Alina Tkachenko", "Vishwas Dhudum", "Bre'Anna Mikell", "Michael Mathew"],
+      "goal": "Understand LOE to implement Switchboard within Salesforce and integrate with Gong.",
+      "role": "Lead — you organized this. Drive the LOE question.",
+      "decision": "Is Switchboard/Sonar SFDC + Gong integration feasible, and at what LOE?",
+      "history": "Sonar had a major outage March 23-24. RCA was just delivered Apr 23 (database issue with hosting vendor). Knowing the RCA builds immediate credibility with this team.",
+      "talkingPoints": [
+        "\"What does Switchboard need from SFDC, and where does Gong fit?\"",
+        "\"What's the minimum LOE for a proof of concept?\"",
+        "\"What are the dependencies on our side vs. yours — who needs to be in the room?\""
+      ],
+      "preReads": ["Sonar outage RCA (received Apr 23 from Megan Griffitt) — skim it, know the gist"],
+      "type": "session"
+    },
+    {
+      "id": "m3",
+      "title": "Frontline Product ↔ New Con Weekly Sync",
+      "day": "Thu Apr 30",
+      "time": "11:35 AM – 12:00 PM PT",
+      "location": "Zoom",
+      "attendees": ["Kelly Talaske", "Andy Michaud-Reisig", "Tina Mangubat", "Wardah Faheem", "Zach Cartwright", "Shannon Lewis"],
+      "goal": "Alignment on frontline tech priorities for New Con. Use this to confirm Wardah as launch owner.",
+      "role": "Lead — you're the organizer",
+      "decision": "New Con Gong Engage launch owner confirmation. July timeline blockers.",
+      "history": "Recurring series you run. New Con is Phase 2 (July target). Engage only — no Forecast in scope. Requires custom sequence templates for builder-facing workflows. All phases currently not_started.",
+      "talkingPoints": [
+        "\"Wardah — confirming you as New Con launch owner for the July Gong Engage rollout. Are you aligned?\"",
+        "\"What builder-facing workflow inputs do we need before we can kick off Discovery?\"",
+        "\"StreetEasy and ZMGI are in the same boat — I'm confirming owners across all three this week.\""
+      ],
+      "preReads": ["launches.json — New Con row (all phases not_started)"],
+      "type": "recurring"
+    },
+    {
+      "id": "m4",
+      "title": "Gong + Zillow | Managed Services Weekly Sync",
+      "day": "This week (time TBC)",
+      "time": "TBC",
+      "location": "Zoom",
+      "attendees": ["Gong Managed Services Team", "Alexander Sohn"],
+      "goal": "UAT status update, timeline confirmation for May 4 pilot launch.",
+      "role": "Client lead / decision-maker",
+      "decision": "Confirm Gong is ready for production deployment end of this week.",
+      "history": "Recurring weekly sync with Gong team. Grant (CSM) was at an offsite last week — slow response to Michelle Maenpaa. Should be back. Gong's readiness for May 4 needs explicit confirmation.",
+      "talkingPoints": [
+        "\"UAT is live in FC2. Disposition modal confirmed — 60-second auto-submit approved by both leads.\"",
+        "\"Targeting production deployment end of this week for May 4 pilot. Confirm you're ready on your end.\"",
+        "\"Grant's response lag last week — is that cleared up? What's our escalation path going forward?\""
+      ],
+      "preReads": ["None — you know this cold"],
+      "type": "recurring"
+    }
+  ],
+  "tasks": [
+    { "id": "t1", "level": "P0", "title": "Decide Gong dialing disable vs. keep for pilot cohort", "due": "Apr 27", "carryover": true, "done": false },
+    { "id": "t2", "level": "P0", "title": "Send Vishwas validated pilot user list (70–80 users)", "due": "Apr 27", "carryover": true, "done": false },
+    { "id": "t3", "level": "P0", "title": "Confirm Gong Forecast workstream owner — escalate to VP Sales Ops", "due": "Apr 28", "carryover": true, "done": false },
+    { "id": "t4", "level": "P0", "title": "Verify Genesys API credentials unblocked — check INC1965714", "due": "Apr 27", "carryover": true, "done": false },
+    { "id": "t5", "level": "P1", "title": "Monitor Genesys UAT — unblock Chris/Coventry as needed", "due": "Apr 28", "carryover": false, "done": false },
+    { "id": "t6", "level": "P1", "title": "Cut Genesis dev user setup tickets for UAT testers (Vishwas needs this)", "due": "Apr 27", "carryover": false, "done": false },
+    { "id": "t7", "level": "P2", "title": "Draft Q2 executive status report", "due": "Apr 30", "carryover": false, "done": false },
+    { "id": "t8", "level": "P2", "title": "Confirm launch owners — Wardah, Yen, Taylor/Ryan (Slack async)", "due": "May 1", "carryover": false, "done": false },
+    { "id": "t9", "level": "P2", "title": "Schedule Switchboard / Jen Swanton sync (promised to Mark Kickbusch)", "due": "This week", "carryover": false, "done": false },
+    { "id": "t10", "level": "P2", "title": "Develop Genesys pilot evaluation criteria + rep satisfaction survey", "due": "Apr 30", "carryover": false, "done": false },
+    { "id": "t11", "level": "P3", "title": "Evaluate Chili Piper readiness for agent success group before Calendly renewal", "due": "May 18", "carryover": false, "done": false },
+    { "id": "t12", "level": "P3", "title": "Engage legal for ZMGI compliance review kickoff", "due": "May 15", "carryover": false, "done": false }
+  ],
+  "deepWork": {
+    "window": "Monday morning before your flight — or on the plane",
+    "reasoning": "The retreat is in-person all week. Once you land in Seattle, desk time disappears into sessions, dinners, and hallway conversations. Your last protected block is before/during travel Monday.",
+    "suggestion": "Resolve the three P0 decisions via Slack before boarding. Draft the Q2 exec status report on the plane. Land in Seattle with both closed."
+  },
+  "winBank": [
+    "Genesys Dialer UAT kicked off on schedule — all 3 dialer scenarios demoed in sandbox, disposition modal (60-sec auto-submit) approved by both Coventry and Hayden.",
+    "Supported Google Workspace migration across ASA with minimal user-facing issues after three prior fire drills — the preparation paid off.",
+    "Sonar outage RCA received and loop officially closed — March incident resolved and acknowledged by Shannon Spivey on behalf of the team."
+  ],
+  "followUps": [
+    {
+      "id": "fu1",
+      "channel": "slack",
+      "person": "Robyn Post",
+      "channelName": "DM",
+      "preview": "Do you know whether CSMs will have access to Engage? Or is that just Sales? / We're trying to figure out what CSMs will need to be trained on in June.",
+      "sentAt": "Apr 24, 11:53 AM",
+      "urgency": "high",
+      "draft": "Hey Robyn! CSMs aren't in scope for Engage licenses in the initial rollout — it's scoped to sales reps only for now. That said, great question, and one I want to get right before June training planning kicks off. Let me confirm the license breakdown with the team and follow up with a clear answer by end of this week."
+    },
+    {
+      "id": "fu2",
+      "channel": "slack",
+      "person": "Mark Kickbusch",
+      "channelName": "Group DM (w/ Jason Chan, Rex Sprankle)",
+      "preview": "Shared auto delete doc + Executive Pre-Read after you promised to schedule time this week.",
+      "sentAt": "Apr 24, 11:09 AM",
+      "urgency": "medium",
+      "draft": "Thanks Mark — got both docs, appreciate you sending these over. Will review ahead of our sync. I'm locking in time with you and Jen Swanton this week — calendar invite coming shortly."
+    }
+  ]
+}
