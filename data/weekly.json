@@ -6,6 +6,12 @@
     "briefNumber": 1
   },
   "stakes": "You're heading to Seattle for the CoreTech zRetreat with a Genesys Dialer UAT that must close by Tuesday, two overdue P0 actions, and an exec status report due Friday — all while operating out of a hotel. Win this week and the May 4 pilot launches on time.",
+  "stakesCards": [
+    { "id": "s1", "level": "P0", "icon": "fire",     "headline": "UAT closes Tuesday",       "sub": "Pilot launches May 4 — 2 decisions overdue" },
+    { "id": "s2", "level": "P0", "icon": "fire",     "headline": "2 P0s overdue pre-flight", "sub": "Resolve before boarding Monday morning" },
+    { "id": "s3", "level": "P1", "icon": "plane",    "headline": "Seattle all week",          "sub": "CoreTech zRetreat · limited desk time" },
+    { "id": "s4", "level": "P2", "icon": "doc",      "headline": "Exec report due Friday",    "sub": "Draft on the plane — don't wait til Thursday" }
+  ],
   "priorities": [
     {
       "id": "p1",

@@ -58,11 +58,11 @@ export default function DraftModal({ item, onClose }: { item: FollowUp | null; o
           style={{ borderBottom: '1px solid rgba(255,255,255,0.07)', background: 'rgba(99,102,241,0.06)' }}>
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
-              style={{ background: 'linear-gradient(135deg, #6366f1, #8b5cf6)', boxShadow: '0 0 12px rgba(99,102,241,0.4)' }}>
-              <span className="sterling-mono text-white text-xs font-bold">S</span>
+              style={{ background: 'linear-gradient(135deg, #4338ca, #6d28d9)', boxShadow: '0 0 12px rgba(99,102,241,0.4)' }}>
+              <span className="sterling-mono text-white text-xs font-bold">N</span>
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">Sterling's Draft</p>
+              <p className="text-sm font-semibold text-white">Nexus's Draft</p>
               <p className="text-xs text-slate-500">Reply to {item.person}</p>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function DraftModal({ item, onClose }: { item: FollowUp | null; o
                     style={{ animation: `ping-slow 1.2s ease-in-out ${i * 0.2}s infinite` }} />
                 ))}
               </div>
-              <span className="text-sm text-slate-500 italic">Sterling is composing...</span>
+              <span className="text-sm text-slate-500 italic">Nexus is composing...</span>
             </div>
           )}
 
@@ -127,10 +127,10 @@ export default function DraftModal({ item, onClose }: { item: FollowUp | null; o
             </div>
           )}
 
-          {/* Sterling signature */}
+          {/* Nexus signature */}
           {phase === 'done' && (
             <p className="text-xs text-slate-600 text-right mt-3 sterling-mono">
-              — Sterling
+              — Nexus
             </p>
           )}
         </div>

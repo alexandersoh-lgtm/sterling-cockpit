@@ -1,5 +1,5 @@
 import weeklyData from '@/data/weekly.json'
-import SterlingHeader from '@/components/SterlingHeader'
+import NexusHeader from '@/components/NexusHeader'
 import PriorityGrid from '@/components/PriorityGrid'
 import MeetingSection from '@/components/MeetingSection'
 import TaskList from '@/components/TaskList'
@@ -12,8 +12,7 @@ export default function WeeklyPage() {
 
   return (
     <div className="min-h-screen dot-grid">
-      <SterlingHeader
-        stakes={d.stakes}
+      <NexusHeader
         weekStart={d.meta.weekStart}
         weekEnd={d.meta.weekEnd}
         briefNumber={d.meta.briefNumber}
@@ -22,16 +21,15 @@ export default function WeeklyPage() {
         followUpCount={d.followUps.length}
         taskTotal={d.tasks.length}
         taskDone={0}
+        stakesCards={d.stakesCards}
       />
 
-      {/* Main dashboard — 3-column grid */}
       <div className="max-w-[1600px] mx-auto px-4 sm:px-5 py-5">
         <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr_300px] gap-4">
 
           {/* ── COL 1: Priorities ─────────────────────── */}
           <div className="space-y-4">
             <PriorityGrid priorities={d.priorities} />
-            <FollowUps followUps={d.followUps} />
           </div>
 
           {/* ── COL 2: Meetings + Tasks ───────────────── */}
@@ -40,8 +38,9 @@ export default function WeeklyPage() {
             <TaskList tasks={d.tasks} />
           </div>
 
-          {/* ── COL 3: Decisions + Stakeholders + Wins + Deep Work ── */}
+          {/* ── COL 3: Follow-ups (top) + Decisions + Stakeholders + Wins + Deep Work ── */}
           <div className="space-y-4">
+            <FollowUps followUps={d.followUps} />
             <DecisionRegister decisions={d.decisions} />
             <StakeholderPulse stakeholders={d.stakeholders} />
             <WinBank wins={d.winBank} />
@@ -51,13 +50,13 @@ export default function WeeklyPage() {
 
         {/* Footer */}
         <div className="mt-8 pt-5 flex items-center justify-center gap-2"
-          style={{ borderTop:'1px solid rgba(255,255,255,0.04)' }}>
+          style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
           <div className="w-4 h-4 rounded flex items-center justify-center"
-            style={{ background:'linear-gradient(135deg,#4f46e5,#7c3aed)' }}>
-            <span className="sterling-mono text-white text-xs font-bold" style={{ fontSize:'8px' }}>S</span>
+            style={{ background: 'linear-gradient(135deg,#4338ca,#6d28d9)' }}>
+            <span className="sterling-mono text-white font-bold" style={{ fontSize: '8px' }}>N</span>
           </div>
           <p className="sterling-mono text-xs text-slate-700 tracking-widest">
-            You're ready. Go lead. — Sterling
+            You're ready. Go lead. — Nexus
           </p>
         </div>
       </div>

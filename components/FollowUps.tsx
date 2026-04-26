@@ -50,7 +50,7 @@ export default function FollowUps({ followUps }: { followUps: FollowUp[] }) {
                 <button onClick={() => setActive(fu)}
                   className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all"
                   style={{ background:'linear-gradient(135deg,rgba(99,102,241,0.12),rgba(139,92,246,0.12))', border:'1px solid rgba(99,102,241,0.25)', color:'#a5b4fc' }}>
-                  <Sparkles size={11}/> Draft with Sterling →
+                  <Sparkles size={11}/> Draft with Nexus →
                 </button>
               </div>
             )
