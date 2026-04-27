@@ -64,7 +64,7 @@ export default function TaskList({ tasks: init }: { tasks: Task[] }) {
                     <CornerDownLeft size={9}/>
                   </span>
                 )}
-                <span className="text-xs text-slate-600 flex-shrink-0 w-12 text-right">{task.due}</span>
+                <span className="text-xs text-slate-600 flex-shrink-0 w-16 text-right">{task.due}</span>
               </button>
               {!task.done && task.links && task.links.length > 0 && (
                 <div className="flex flex-wrap gap-1 px-3 pb-2">
