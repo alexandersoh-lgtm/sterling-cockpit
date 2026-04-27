@@ -51,39 +51,35 @@ export default function TaskList({ tasks: init }: { tasks: Task[] }) {
         {filtered.map((task, i) => {
           const col = LC[task.level] || '#6366f1'
           return (
-            <button key={task.id} onClick={() => toggle(task.id)}
-              className={`row-hover w-full flex items-center gap-2.5 px-3 py-2 text-left transition-all group ${i !== 0 ? 'border-t border-white/[0.04]' : ''}`}>
-              {/* Checkbox */}
-              {task.done
-                ? <CheckCircle2 size={13} className="flex-shrink-0 text-emerald-500"/>
-                : <Circle size={13} className="flex-shrink-0 text-slate-700 group-hover:text-slate-500 transition-colors"/>}
-              {/* Level */}
-              <span className="sterling-mono text-xs font-bold flex-shrink-0 w-5" style={{ color: task.done ? '#334155' : col }}>{task.level}</span>
-              {/* Title */}
-              <span className={`text-xs flex-1 min-w-0 truncate ${task.done ? 'line-through text-slate-600' : 'text-slate-300'}`}>{task.title}</span>
-              {/* Carryover */}
-              {task.carryover && !task.done && (
-                <span className="flex items-center gap-0.5 text-xs flex-shrink-0" style={{ color: '#f97316', opacity: 0.7 }}>
-                  <CornerDownLeft size={9}/>
-                </span>
+            <div key={task.id} className={i !== 0 ? 'border-t border-white/[0.04]' : ''}>
+              <button onClick={() => toggle(task.id)}
+                className="row-hover w-full flex items-center gap-2.5 px-3 py-2 text-left transition-all group">
+                {task.done
+                  ? <CheckCircle2 size={13} className="flex-shrink-0 text-emerald-500"/>
+                  : <Circle size={13} className="flex-shrink-0 text-slate-700 group-hover:text-slate-500 transition-colors"/>}
+                <span className="sterling-mono text-xs font-bold flex-shrink-0 w-5" style={{ color: task.done ? '#334155' : col }}>{task.level}</span>
+                <span className={`text-xs flex-1 min-w-0 truncate ${task.done ? 'line-through text-slate-600' : 'text-slate-300'}`}>{task.title}</span>
+                {task.carryover && !task.done && (
+                  <span className="flex items-center gap-0.5 text-xs flex-shrink-0" style={{ color: '#f97316', opacity: 0.7 }}>
+                    <CornerDownLeft size={9}/>
+                  </span>
+                )}
+                <span className="text-xs text-slate-600 flex-shrink-0 w-12 text-right">{task.due}</span>
+              </button>
+              {!task.done && task.links && task.links.length > 0 && (
+                <div className="flex flex-wrap gap-1 px-3 pb-2">
+                  {task.links.map((l, li) => (
+                    <a key={li} href={l.url} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-1 px-1.5 py-0.5 rounded text-xs transition-all"
+                      style={{ background:'rgba(99,102,241,0.07)', border:'1px solid rgba(99,102,241,0.15)', color:'#6366f1' }}>
+                      <span style={{ fontSize:'10px' }}>{LINK_ICON[l.type]||'🔗'}</span>
+                      <span className="opacity-80">{l.label}</span>
+                      <ExternalLink size={8} className="opacity-50"/>
+                    </a>
+                  ))}
+                </div>
               )}
-              {/* Due */}
-              <span className="text-xs text-slate-600 flex-shrink-0 w-12 text-right">{task.due}</span>
-            </button>
-            {/* Links row — only when not done */}
-            {!task.done && task.links && task.links.length > 0 && (
-              <div className="flex flex-wrap gap-1 px-3 pb-2" onClick={e => e.stopPropagation()}>
-                {task.links.map((l, li) => (
-                  <a key={li} href={l.url} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-1.5 py-0.5 rounded text-xs transition-all"
-                    style={{ background:'rgba(99,102,241,0.07)', border:'1px solid rgba(99,102,241,0.15)', color:'#6366f1' }}>
-                    <span style={{ fontSize:'10px' }}>{LINK_ICON[l.type]||'🔗'}</span>
-                    <span className="opacity-80">{l.label}</span>
-                    <ExternalLink size={8} className="opacity-50"/>
-                  </a>
-                ))}
-              </div>
-            )}
+            </div>
           )
         })}
         {filtered.length === 0 && (
