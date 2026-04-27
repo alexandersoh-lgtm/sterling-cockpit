@@ -82,6 +82,12 @@ export default function NexusHeader({ weekStart, weekEnd, briefNumber, p0Count, 
               </div>
               <span className="sterling-mono text-xs text-slate-600">#{String(briefNumber).padStart(3,'0')}</span>
             </div>
+            <a href="/daily"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs text-slate-400 hover:text-white transition-all"
+              style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)' }}>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span className="hidden sm:inline">Daily</span>
+            </a>
             <button onClick={() => window.location.reload()}
               className="p-1.5 rounded-lg text-slate-500 hover:text-slate-300 transition-colors"
               style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}>

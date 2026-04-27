@@ -1,0 +1,266 @@
+{
+  "weekStart": "2026-04-27",
+  "weekEnd": "2026-05-01",
+  "days": [
+    {
+      "id": "mon",
+      "dayName": "Monday",
+      "shortName": "MON",
+      "date": "Apr 27",
+      "fullDate": "2026-04-27",
+      "theme": "Pre-flight sprint. Three P0 decisions before 9am — then the plane is your office.",
+      "energy": {
+        "morning": "high",
+        "afternoon": "medium",
+        "note": "Front-load everything before boarding. Once in Seattle your calendar fills up. The plane is the last protected block of the week."
+      },
+      "timeline": [
+        { "time": "6:30 AM", "end": "8:30 AM", "type": "work",    "label": "Pre-flight work window",      "sub": "P0 decisions + pilot list via Slack" },
+        { "time": "9:00 AM", "end": "11:00 AM","type": "travel",  "label": "✈ DL 1714 — LAX to SEA",     "sub": "Deep work: Q2 exec report draft" },
+        { "time": "11:30 AM","end": "1:30 PM", "type": "free",    "label": "Land + hotel check-in",       "sub": "Seattle, WA" },
+        { "time": "2:00 PM", "end": "5:30 PM", "type": "meeting", "label": "CoreTech zRetreat — Day 1",  "sub": "Opening sessions + introductions" },
+        { "time": "6:00 PM", "end": "9:00 PM", "type": "free",    "label": "Team dinner / networking",    "sub": "Find VP Sales Ops — Forecast owner conversation" }
+      ],
+      "endOfDayTarget": [
+        "Gong dialing decision communicated to Chris Hayden + Vishwas",
+        "Pilot user list (70–80 users) sent to Vishwas before boarding",
+        "Q2 exec report rough draft complete before wheels down"
+      ],
+      "meetings": [],
+      "topTasks": [
+        { "id": "t1", "level": "P0", "title": "Decide: Gong dialing disable vs. keep for pilot", "due": "Before 9am", "carryover": true, "note": "Chris + Vishwas are blocked on this. Call it and send the Slack before you board.", "links": [{ "label": "B2BFAST-11694", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11694", "type": "jira" }, { "label": "B2BFAST-11848 · UAT", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11848", "type": "jira" }] },
+        { "id": "t2", "level": "P0", "title": "Send Vishwas validated pilot user list (70–80 users)", "due": "Before 9am", "carryover": true, "note": "GNR + acquisitions volunteers. Vishwas can't begin user provisioning without this.", "links": [{ "label": "B2BFAST-11848 · UAT", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11848", "type": "jira" }] },
+        { "id": "t4", "level": "P0", "title": "Verify Genesys API credentials — check INC1965714", "due": "Before 9am", "carryover": true, "note": "INC1964584 shows resolved but INC1965714 had new comments Apr 24. Confirm with Vishwas: is non-prod API access actually live?", "links": [{ "label": "B2BFAST-11428", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11428", "type": "jira" }] },
+        { "id": "t6", "level": "P1", "title": "Cut Genesis dev user setup tickets for UAT testers", "due": "Today", "carryover": false, "note": "Vishwas needs Chris + Coventry in Genesis dev env. Ticket for UC Engineer.", "links": [{ "label": "B2BFAST-11849", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11849", "type": "jira" }] },
+        { "id": "t7", "level": "P2", "title": "Draft Q2 executive status report — on the plane", "due": "Due Apr 30", "carryover": false, "note": "Pull workstream % complete, open risks (r1, r2), decisions made. Even a rough outline now = no scramble Thursday.", "links": [{ "label": "AS Weekly Tracker", "url": "https://docs.google.com/document/d/11OmgCZvpwxsY0dZpJvaSU7YjrecDOIJrGZKDDp0pfRs/edit", "type": "doc" }, { "label": "Gong Tracker Live", "url": "https://gong-tracker-alexandersoh-lgtms-projects.vercel.app", "type": "tracker" }] }
+      ],
+      "taskSchedule": [
+        { "time": "6:30 – 7:30 AM", "label": "Gong dialing decision + Genesys API check", "tasks": ["t1","t4"], "type": "work" },
+        { "time": "7:30 – 8:45 AM", "label": "Pilot user list → Vishwas + cut Genesis dev tickets", "tasks": ["t2","t6"], "type": "work" },
+        { "time": "9:00 – 11:00 AM", "label": "Q2 exec report draft (plane — no wifi needed)", "tasks": ["t7"], "type": "deep" },
+        { "time": "2:00 – 5:30 PM", "label": "zRetreat Day 1 — attend, network, find VP Sales Ops", "tasks": [], "type": "meeting" }
+      ],
+      "followUps": [
+        { "id": "fu1", "channel": "slack", "person": "Robyn Post", "channelName": "DM", "preview": "CSMs access to Engage? / What will CSMs need for June training?", "sentAt": "Apr 24, 11:53 AM", "urgency": "high", "draft": "Hey Robyn! CSMs aren't in scope for Engage licenses in the initial rollout — it's scoped to sales reps only for now. That said, great question, and one I want to get right before June training planning kicks off. Let me confirm the license breakdown and follow up by end of this week." },
+        { "id": "fu2", "channel": "slack", "person": "Mark Kickbusch", "channelName": "Group DM", "preview": "Shared auto delete doc + Exec Pre-Read — waiting on calendar invite.", "sentAt": "Apr 24, 11:09 AM", "urgency": "medium", "draft": "Thanks Mark — got both docs, appreciate you sending these over. I'm locking in time with you and Jen Swanton this week — calendar invite coming shortly." }
+      ]
+    },
+    {
+      "id": "tue",
+      "dayName": "Tuesday",
+      "shortName": "TUE",
+      "date": "Apr 28",
+      "fullDate": "2026-04-28",
+      "theme": "UAT closes today. Forecast owner must be named by COB. Both are P0s. Both are yours.",
+      "energy": {
+        "morning": "high",
+        "afternoon": "high",
+        "note": "Two critical P0 closes today. Morning = track down the Forecast owner in person. Afternoon = UAT sign-off confirmation from Chris + Coventry."
+      },
+      "timeline": [
+        { "time": "8:00 AM", "end": "10:00 AM","type": "meeting", "label": "zRetreat — Day 2 Morning Sessions",   "sub": "Network before sessions start" },
+        { "time": "10:00 AM","end": "11:30 AM","type": "work",    "label": "Find VP Sales Ops — Forecast owner",  "sub": "In-person conversation at retreat" },
+        { "time": "11:30 AM","end": "12:30 PM","type": "work",    "label": "UAT check-in with Chris + Coventry",  "sub": "Slack / call — confirm go/no-go signal" },
+        { "time": "12:30 PM","end": "2:00 PM", "type": "free",    "label": "Lunch / informal networking",         "sub": "Follow up on Forecast owner" },
+        { "time": "2:00 PM", "end": "5:30 PM", "type": "meeting", "label": "zRetreat — Day 2 Afternoon Sessions", "sub": "Attend, contribute, close loops" },
+        { "time": "6:00 PM", "end": "8:00 PM", "type": "free",    "label": "Team dinner",                         "sub": "Confirm Forecast owner if not done yet" }
+      ],
+      "endOfDayTarget": [
+        "Gong Forecast workstream owner named and confirmed in writing",
+        "Genesys UAT go/no-go signal received from Chris + Coventry",
+        "Genesis dev user setup tickets confirmed cut (from yesterday)"
+      ],
+      "meetings": [],
+      "topTasks": [
+        { "id": "t3", "level": "P0", "title": "Confirm Gong Forecast workstream owner", "due": "Today — COB", "carryover": true, "note": "Find VP Sales Ops or delegate at retreat. Have the conversation in person — do not let it become a Slack thread.", "links": [{ "label": "Rollout Plan [WIP]", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" }, { "label": "Gong PMO Tracker", "url": "https://docs.google.com/document/d/1w_dPLhXXx72qe_AZTFgimnndmHi5QH2uIPWwK5Cfny8/edit", "type": "doc" }] },
+        { "id": "t5", "level": "P1", "title": "UAT go/no-go — monitor + unblock Chris/Coventry", "due": "Today", "carryover": false, "note": "Signal expected today. Be responsive on Slack. Anything they surface — unblock immediately.", "links": [{ "label": "B2BFAST-11848 · UAT", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11848", "type": "jira" }, { "label": "B2BFAST-11847 · QA E2E", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11847", "type": "jira" }] },
+        { "id": "t6", "level": "P1", "title": "Confirm Genesis dev user setup tickets are cut", "due": "Today (if not done Mon)", "carryover": false, "note": "If not done yesterday — cut them now. Vishwas needs Chris + Coventry in dev env.", "links": [{ "label": "B2BFAST-11849", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-11849", "type": "jira" }] }
+      ],
+      "taskSchedule": [
+        { "time": "8:00 – 10:00 AM", "label": "zRetreat morning — network before sessions", "tasks": [], "type": "meeting" },
+        { "time": "10:00 – 11:30 AM", "label": "Find + close Forecast owner conversation (in person)", "tasks": ["t3"], "type": "work" },
+        { "time": "11:30 AM – 12:30 PM", "label": "UAT check-in — get signal from Chris + Coventry", "tasks": ["t5"], "type": "work" },
+        { "time": "2:00 – 5:30 PM", "label": "zRetreat afternoon — confirm Forecast owner in writing if not done", "tasks": ["t6"], "type": "meeting" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "wed",
+      "dayName": "Wednesday",
+      "shortName": "WED",
+      "date": "Apr 29",
+      "fullDate": "2026-04-29",
+      "theme": "The Switchboard Deep Dive is at 1:05pm. You organized it. Come prepared — skim the Sonar RCA first.",
+      "energy": {
+        "morning": "medium",
+        "afternoon": "high",
+        "note": "Light morning gives you time to prep for the 1:05pm meeting. That meeting is the day's centerpiece — own it."
+      },
+      "timeline": [
+        { "time": "8:00 AM", "end": "12:00 PM","type": "meeting", "label": "zRetreat — Day 3 Morning Sessions",  "sub": "Attend + engage" },
+        { "time": "12:00 PM","end": "1:05 PM", "type": "work",    "label": "Prep: Switchboard Deep Dive",         "sub": "Read Sonar RCA + Executive Pre-Read (30 min)" },
+        { "time": "1:05 PM", "end": "1:50 PM", "type": "meeting", "label": "Switchboard Deep Dive",               "sub": "Isabel, Vince, Alina, Vishwas, Bre'Anna, Michael" },
+        { "time": "1:50 PM", "end": "3:00 PM", "type": "work",    "label": "Post-meeting: follow-up tasks",       "sub": "Schedule Jen Swanton sync + confirm launch owners" },
+        { "time": "3:00 PM", "end": "5:30 PM", "type": "meeting", "label": "zRetreat — Afternoon Sessions",       "sub": "Attend" },
+        { "time": "6:00 PM", "end": "9:00 PM", "type": "free",    "label": "Team dinner",                         "sub": "" }
+      ],
+      "endOfDayTarget": [
+        "Switchboard LOE scoped and documented from meeting output",
+        "Jen Swanton sync scheduled (as promised to Mark Kickbusch)",
+        "At least 2 of 3 Phase 2 launch owners confirmed via Slack"
+      ],
+      "meetings": [
+        {
+          "id": "m2",
+          "title": "Switchboard Deep Dive",
+          "time": "1:05 PM – 1:50 PM",
+          "location": "In-Person, Seattle",
+          "attendees": ["Isabel Ferrara", "Vince Cotroneo", "Alina Tkachenko", "Vishwas Dhudum", "Bre'Anna Mikell", "Michael Mathew"],
+          "goal": "Scope the LOE to implement Switchboard within Salesforce and integrate with Gong.",
+          "role": "Lead — you organized this. Drive the LOE question.",
+          "decision": "Is Switchboard/Sonar SFDC + Gong integration feasible at reasonable LOE?",
+          "talkingPoints": [
+            "\"What does Switchboard need from SFDC, and where does Gong fit in?\"",
+            "\"What's the minimum LOE for a proof of concept?\"",
+            "\"What dependencies are on our side vs. yours — who else needs to be in the room?\""
+          ],
+          "preReads": ["Sonar outage RCA (Apr 23 from Megan Griffitt)", "Executive Pre-Read: Genesys & Gong Recording Retention"],
+          "links": [
+            { "label": "Executive Pre-Read: Genesys & Gong Retention", "url": "https://docs.google.com/document/d/1V52SMTKQSmvFVlVxwNAJtMhm926kvW9A/edit", "type": "doc" },
+            { "label": "Auto Delete Project Doc", "url": "https://docs.google.com/document/d/1LL963D8Qz3p1sv_RBwyGUT16WjoHZSmW/edit", "type": "doc" }
+          ]
+        }
+      ],
+      "topTasks": [
+        { "id": "t9", "level": "P2", "title": "Schedule Switchboard / Jen Swanton sync", "due": "Today (post-meeting)", "carryover": false, "note": "You promised Mark Kickbusch this week. Send the calendar invite right after the 1:50pm meeting.", "links": [{ "label": "Executive Pre-Read", "url": "https://docs.google.com/document/d/1V52SMTKQSmvFVlVxwNAJtMhm926kvW9A/edit", "type": "doc" }] },
+        { "id": "t8", "level": "P2", "title": "Start confirming Phase 2 launch owners (Wardah, Yen)", "due": "Due May 1", "carryover": false, "note": "Async Slack. 5 min. Don't wait until Thursday — start now.", "links": [{ "label": "Rollout Plan — Phase 2", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" }] }
+      ],
+      "taskSchedule": [
+        { "time": "8:00 AM – 12:00 PM", "label": "zRetreat morning sessions", "tasks": [], "type": "meeting" },
+        { "time": "12:00 – 1:05 PM",    "label": "Prep: read Sonar RCA + Exec Pre-Read", "tasks": [], "type": "deep" },
+        { "time": "1:05 – 1:50 PM",     "label": "Switchboard Deep Dive", "tasks": [], "type": "meeting" },
+        { "time": "1:50 – 2:30 PM",     "label": "Schedule Jen Swanton + Slack Wardah/Yen", "tasks": ["t9","t8"], "type": "work" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "thu",
+      "dayName": "Thursday",
+      "shortName": "THU",
+      "date": "Apr 30",
+      "fullDate": "2026-04-30",
+      "theme": "Q2 report is due today. New Con sync is at 11:35am. Get the report out the door before you join that call.",
+      "energy": {
+        "morning": "high",
+        "afternoon": "medium",
+        "note": "Write the exec report first thing — morning clarity before meetings. After 11:35am you'll be in reactive mode."
+      },
+      "timeline": [
+        { "time": "7:00 AM", "end": "9:00 AM", "type": "deep",    "label": "Q2 exec report — finalize + send", "sub": "Must be done before 11:35am sync" },
+        { "time": "9:00 AM", "end": "10:00 AM","type": "work",    "label": "Gong Managed Services check-in",   "sub": "Confirm May 4 pilot readiness (TBC)" },
+        { "time": "11:35 AM","end": "12:00 PM","type": "meeting", "label": "Frontline Product ↔ New Con Sync", "sub": "Confirm Wardah as launch owner" },
+        { "time": "12:00 PM","end": "1:30 PM", "type": "work",    "label": "Confirm remaining launch owners",  "sub": "Yen (SE) + Taylor/Ryan (ZMGI) via Slack" },
+        { "time": "1:30 PM", "end": "3:00 PM", "type": "meeting", "label": "zRetreat — Day 4 sessions",       "sub": "" },
+        { "time": "3:00 PM", "end": "5:00 PM", "type": "work",    "label": "Pilot eval criteria + survey draft","sub": "Genesys pilot evaluation framework" }
+      ],
+      "endOfDayTarget": [
+        "Q2 exec status report submitted before lunch",
+        "Wardah confirmed as New Con launch owner at sync",
+        "All 3 Phase 2 owners confirmed (Wardah, Yen, Taylor/Ryan)"
+      ],
+      "meetings": [
+        {
+          "id": "m3",
+          "title": "Frontline Product ↔ New Con Weekly Sync",
+          "time": "11:35 AM – 12:00 PM",
+          "location": "Zoom",
+          "attendees": ["Kelly Talaske", "Andy Michaud-Reisig", "Tina Mangubat", "Wardah Faheem", "Zach Cartwright", "Shannon Lewis"],
+          "goal": "Confirm Wardah Faheem as New Con Gong Engage launch owner. Surface any July timeline blockers.",
+          "role": "Lead — you run this recurring sync",
+          "decision": "Wardah confirmed as New Con launch owner? July timeline viable?",
+          "talkingPoints": [
+            "\"Wardah — confirming you as New Con launch owner for the July Gong Engage rollout. Are you aligned?\"",
+            "\"What builder-facing workflow inputs do we need before Discovery can kick off?\"",
+            "\"StreetEasy and ZMGI owners are also being confirmed this week — all three Phase 2 groups aligned.\""
+          ],
+          "preReads": ["New Con Weekly Agenda/Notes", "Rollout Plan — Phase 2 section"],
+          "links": [
+            { "label": "New Con Weekly Agenda", "url": "https://docs.google.com/document/d/1O8SKXWv51yHm6TEOgKNJZ2S0vytGeiZxx7uLhhEzGbo/edit", "type": "doc" },
+            { "label": "Rollout Plan — Phase 2", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" },
+            { "label": "Frontline Products Sync Agenda", "url": "https://docs.google.com/document/d/1Iwu_er0EsmD6LU4qkgWImc9EQCGT7-Wotky_k01c3JQ/edit", "type": "doc" }
+          ]
+        },
+        {
+          "id": "m4",
+          "title": "Gong + Zillow | Managed Services Weekly Sync",
+          "time": "TBC — likely AM",
+          "location": "Zoom",
+          "attendees": ["Gong Managed Services Team", "Alexander Sohn"],
+          "goal": "Confirm Gong is ready for production deployment this week for May 4 pilot.",
+          "role": "Client lead — you drive the agenda",
+          "decision": "Go/no-go confirmation from Gong for production deployment end of this week.",
+          "talkingPoints": [
+            "\"UAT is live in FC2. Disposition modal confirmed. Targeting production deployment end of this week.\"",
+            "\"Confirm you're ready on your end for the May 4 pilot launch.\"",
+            "\"Grant's response lag last week — is that cleared up for escalation paths going forward?\""
+          ],
+          "preReads": ["None — you know this cold"],
+          "links": [
+            { "label": "Rollout Plan [WIP]", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" },
+            { "label": "Implementation SOW", "url": "https://docs.google.com/document/d/1cgd7PIck03iWKxDphRGPXWEl5qvhEOjMLd--e9P_mE0/edit", "type": "doc" }
+          ]
+        }
+      ],
+      "topTasks": [
+        { "id": "t7", "level": "P2", "title": "Finalize + submit Q2 executive status report", "due": "Today — before 11:35am", "carryover": false, "note": "Hard deadline. It's due today. Write 7–9am, polish 9–10am, send before the New Con call.", "links": [{ "label": "AS Weekly Tracker", "url": "https://docs.google.com/document/d/11OmgCZvpwxsY0dZpJvaSU7YjrecDOIJrGZKDDp0pfRs/edit", "type": "doc" }, { "label": "Gong Tracker Live", "url": "https://gong-tracker-alexandersoh-lgtms-projects.vercel.app", "type": "tracker" }] },
+        { "id": "t8", "level": "P2", "title": "Confirm all 3 Phase 2 launch owners", "due": "Today (due May 1)", "carryover": false, "note": "Wardah via sync. Yen (SE) + Taylor/Ryan (ZMGI) via Slack. 10 min async after the call.", "links": [{ "label": "Rollout Plan — Phase 2", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" }] },
+        { "id": "t10", "level": "P2", "title": "Develop Genesys pilot evaluation criteria + rep survey", "due": "Today", "carryover": false, "note": "Define what success looks like for the May 4 pilot. Rep satisfaction survey outline.", "links": [{ "label": "B2BFAST-12630", "url": "https://zillowgroup.atlassian.net/browse/B2BFAST-12630", "type": "jira" }] }
+      ],
+      "taskSchedule": [
+        { "time": "7:00 – 9:30 AM",    "label": "Q2 exec report — write + polish", "tasks": ["t7"], "type": "deep" },
+        { "time": "9:30 – 10:00 AM",   "label": "Send Q2 report + Gong Managed Services check-in", "tasks": [], "type": "work" },
+        { "time": "11:35 – 12:00 PM",  "label": "New Con Weekly Sync — confirm Wardah", "tasks": ["t8"], "type": "meeting" },
+        { "time": "12:00 – 12:30 PM",  "label": "Slack Yen + Taylor/Ryan — Phase 2 owner confirm", "tasks": ["t8"], "type": "work" },
+        { "time": "3:00 – 4:30 PM",    "label": "Pilot eval criteria + rep survey draft", "tasks": ["t10"], "type": "work" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "fri",
+      "dayName": "Friday",
+      "shortName": "FRI",
+      "date": "May 1",
+      "fullDate": "2026-05-01",
+      "theme": "Last day of retreat. Launch owner deadline today. Leave Seattle with nothing hanging.",
+      "energy": {
+        "morning": "medium",
+        "afternoon": "low",
+        "note": "Last day of travel energy. Get launch owner confirmations in writing by noon. Backlog work in the afternoon before the flight home."
+      },
+      "timeline": [
+        { "time": "8:00 AM", "end": "12:00 PM","type": "meeting", "label": "zRetreat — Final Day Sessions",    "sub": "Closing sessions + retrospective" },
+        { "time": "12:00 PM","end": "1:00 PM", "type": "work",    "label": "Launch owner final check",          "sub": "Confirm all 3 in writing before leaving Seattle" },
+        { "time": "1:00 PM", "end": "3:00 PM", "type": "work",    "label": "Backlog: ZMGI legal + Chili Piper", "sub": "P3 tasks — get them off the board" },
+        { "time": "4:00 PM", "end": "7:00 PM", "type": "travel",  "label": "✈ Return flight to LAX",           "sub": "Process, reflect, clear email" }
+      ],
+      "endOfDayTarget": [
+        "All 3 Phase 2 launch owners confirmed in writing before leaving Seattle",
+        "ZMGI legal kickoff email sent",
+        "Chili Piper / agent success readiness evaluation started (or delegated)"
+      ],
+      "meetings": [],
+      "topTasks": [
+        { "id": "t8", "level": "P2", "title": "Final check — all 3 Phase 2 launch owners confirmed", "due": "Today — EOD", "carryover": false, "note": "Hard deadline is today. Wardah (New Con), Yen (SE), Taylor/Ryan (ZMGI). Need it in writing before you board.", "links": [{ "label": "Rollout Plan — Phase 2", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" }] },
+        { "id": "t12", "level": "P3", "title": "Send ZMGI legal review kickoff email", "due": "Today", "carryover": false, "note": "One email to legal to begin ZMGI mortgage compliance review. 10 min. Buffer 2 weeks in plan.", "links": [{ "label": "Rollout Plan — ZMGI", "url": "https://docs.google.com/document/d/1VxCf0w1pcNOVeslsPjg3c2CdBNmGM26mWATWCAd59TI/edit", "type": "doc" }] },
+        { "id": "t11", "level": "P3", "title": "Evaluate Chili Piper readiness — agent success group", "due": "Soft May 18", "carryover": false, "note": "Andy flagged this. Calendly renewal is 6/30. Need CP readiness confirmed before you can cut Calendly.", "links": [{ "label": "FP&E 2026 AOP", "url": "https://docs.google.com/spreadsheets/d/1suE5zHXJ86eYiCIYE5Y4VWnsWwqdjmgHCXaTfwHn9hg/edit", "type": "sheet" }] }
+      ],
+      "taskSchedule": [
+        { "time": "8:00 AM – 12:00 PM", "label": "zRetreat closing sessions", "tasks": [], "type": "meeting" },
+        { "time": "12:00 – 1:00 PM",    "label": "Launch owner final confirmations (Slack)", "tasks": ["t8"], "type": "work" },
+        { "time": "1:00 – 2:00 PM",     "label": "ZMGI legal email + Chili Piper eval kickoff", "tasks": ["t12","t11"], "type": "work" },
+        { "time": "4:00 – 7:00 PM",     "label": "Return flight — clear email, prep for next week", "tasks": [], "type": "travel" }
+      ],
+      "followUps": []
+    }
+  ]
+}
